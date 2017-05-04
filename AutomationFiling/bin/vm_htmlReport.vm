@@ -1,0 +1,35 @@
+ <HTML>
+    <HEAD>
+      <TITLE>Filing Report!</TITLE>
+    </HEAD>
+    <BODY>
+      <B>Filing Automation Test Results</B>
+      <table border="1">
+      <tr bgcolor="#9acd32">
+        <th style="text-align:left">TestCaseID</th>
+        <th style="text-align:left">Objective</th>
+        <th style="text-align:left">Expected Result</th>
+        <th style="text-align:left">Actual Result</th>
+        <th style="text-align:left">Pass/Fail</th>
+        <th style="text-align:left">Log Path </th>
+        
+      </tr>
+        #foreach( $reports in $reportGenerationList )
+          <tr>
+            <td>$reports.testCaseId</td>
+             <td>
+      			$reports.objective
+            </td>
+            <td>
+      			$reports.expectedResults
+  			  </td>
+            <td>$reports.actualRsesult</td>
+            <td>$reports.result</td>
+            <td>$reports.comments</td>
+          </tr>
+        #end
+      </TABLE>
+      
+      
+    </BODY>
+  </HTML>
